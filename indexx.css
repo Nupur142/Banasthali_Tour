@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(#FF966C, rgba(255, 150, 108, 0.7)), /* Peachy tint */
+              linear-gradient(#FF869E, rgba(255, 134, 158, 0.7)), /* Light pink tint */
+              linear-gradient(#FF5D7B, rgba(255, 93, 123, 0.7)), /* Pink tint */
+              url('Blank-Timeline-Template-PowerPoint.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #F9BFAE; /* Fallback color */
+  background-blend-mode: overlay;
+}
+.tour {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: absolute; /* 100% of the viewport height */
+}
+
+h1 {
+  text-align: center;
+  font-size: 50px;
+}
+
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.main-menu {
+  margin-bottom: 170px; /* Adjust as needed */
+}
+
+.additional-menu {
+  margin-top: 140px; /* Adjust as needed */
+}
+
+.main-menu li {
+  list-style: none;
+  margin: 0 190px 0 0; /* Adjust as needed */
+  transition: 0.5s;
+}
+
+.additional-menu li {
+  list-style: none;
+  margin: 0 180px 0 0; /* Adjust as needed */
+  transition: 0.5s;
+}
+
+ul li:last-child {
+  margin-right: 0;
+}
+
+ul li a {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  padding: 5px;
+  font-size: 15px;
+  font-family: sans-serif;
+  color: #282626;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+ul:hover li a {
+  transform: scale(1.25);
+  opacity: 0.2;
+  filter: blur(5px);
+}
+
+ul li a:hover {
+  transform: scale(1.55px);
+  opacity: 1;
+  filter: blur(0);
+  text-decoration: none;
+  color: #121111;
+}
+
+ul li a:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  transition: 0.5s;
+  transform-origin: right;
+  transform: scaleX(0);
+  z-index: -1;
+}
+
+ul li a:hover:before {
+  transition: transform 0.5s;
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.description {
+  display: none;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  padding: 10px;
+  position: absolute;
+  top: 30px;
+  width: auto;
+  max-width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  font-size: 10px;
+}
+
+ul li a:hover .description {
+  display: block;
+}
+
+
+img {
+  width: 200px; /* Set the width of the image */
+  height: auto;
+   /* Let the browser automatically calculate the height to maintain aspect ratio */
+}
